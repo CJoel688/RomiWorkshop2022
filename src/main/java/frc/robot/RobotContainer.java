@@ -12,6 +12,7 @@ import frc.robot.subsystems.Drivetrain;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.Command;
+import frc.robot.commands.ArcadeDrive;
 
 /**
  * This class is where the bulk of the robot should be declared. Since Command-based is a
@@ -52,7 +53,7 @@ public class RobotContainer {
   private void configureButtonBindings() {
     // The default driving command is tank drive
     Drivetrain.getInstance().setDefaultCommand(
-      new TankDrive(() -> driverController.getLeftY(), () -> driverController.getRightY())
+      new ArcadeDrive(() -> driverController.getLeftY(), () -> driverController.getRightX())
     );
 
     // This is the autonomous code that runs

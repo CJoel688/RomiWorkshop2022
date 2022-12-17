@@ -17,10 +17,10 @@ public class GameAuto extends SequentialCommandGroup {
    */
   public GameAuto() {
     addCommands(
-        new DriveDistance(-0.5, 10),
-        new TurnDegrees(-0.5, 180),
-        new DriveDistance(-0.5, 10),
-        new TurnDegrees(0.5, 180)
+        new DriveDistance(-0.5, 24),
+        new TurnDegrees(-0.5, 90),
+        new DriveDistance(-0.5, 24),
+        new TurnDegrees(0.5, 90)
     );
   }
 }
